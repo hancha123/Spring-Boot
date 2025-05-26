@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: egov-springboot-sample
+  # mariadb datasource 지정
+  datasource:
+    url: jdbc:mariadb://localhost:3306/test
+    username: root
+    password: 311029
+    driver-class-name: org.mariadb.jdbc.Driver
+  # mybatis 설정
+  mybatis:
+    mapper-locations: classpath:/egov/mapper/*.xml
+    type-aliases-package: egov.model
+  # jsp 경로 지정
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
